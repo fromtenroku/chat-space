@@ -28,28 +28,24 @@ Things you may want to cover:
 
 |Column|Type|Options|
 |------|----|-------|
-|id|integer|null: false|
 |name|string|null: false|
-|email|string|null: false, unique: true|
-|password|string|null: false|
 
 ### Association
 - has_many :groups, through: :menbers
 - has_many :messages
-- has_many :menbers
+- has_many :members
 
 
 ## groupsテーブル
 
 |Column|Type|Options|
 |------|----|-------|
-|id|integer|null: false|
-|name|text|null: false|
+|name|string|null: false|
 
 ### Association
 - has_many :users, through: :menbers
 - has_many :messages
-- has_many :menbers
+- has_many :members
 
 
 ## membersテーブル
@@ -68,10 +64,10 @@ Things you may want to cover:
 
 |Column|Type|Options|
 |------|----|-------|
-|id|integer|null: false|
 |user_id|integer|null: false, foreign_key: true|
 |group_id|integer|null: false, foreign_key: true|
 |image|text|
+|text|text|
 
 ### Association
 - belongs_to :group
