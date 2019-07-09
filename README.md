@@ -64,9 +64,9 @@ Things you may want to cover:
 
 |Column|Type|Options|
 |------|----|-------|
-|user|string|null: false, foreign_key: true|
-|group|string|null: false, foreign_key: true|
-|image|text|
+|user|references|null: false, foreign_key: true|
+|group|references|null: false, foreign_key: true|
+|image|string|
 |text|text|
 
 ### Association
