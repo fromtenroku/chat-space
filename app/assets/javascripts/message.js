@@ -20,12 +20,9 @@ $(function(){
     return html;
   }
   $('#new_message').on('submit', function(e){
-    
     e.preventDefault();
-    
     var formData = new FormData(this);
     var url = $(this).attr('action')
-    console.log(url)
     $.ajax({
       url: url,
       type: "POST",
@@ -38,7 +35,8 @@ $(function(){
       console.log(message)
       var html = buildHTML(message);
       $('.messages').append(html);
-      $('.form__message').val('');
+      $('.messages').animate({scrollTop: $(".messages")[0].scrollHeight}, "fast");
+      $('.form__message')[0].reset();
     })
     .fail(function(){
       alert('error');
