@@ -28,7 +28,7 @@
       #chat-group-users
         - @group.users.each do |user|
           #chat-group-user-22.chat-group-user.clearfix
-            %input{name: "group[user_ids][]", type: "hidden", value: "#{current_user.id}"}
+            %input{name: "group[user_ids][]", type: "hidden", value: "#{user.id}"}
             - if user == current_user
               %p.chat-group-user__name
                 = user.name
