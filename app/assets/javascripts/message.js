@@ -55,10 +55,10 @@ $(function(){
         data: {id: last_message_id}
       })
       .done(function(messages) {
-        console.log('success');
+
       })
       .fail(function() {
-        console.log('error');
+
     });
   };
 })
