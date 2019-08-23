@@ -1,7 +1,7 @@
 .side-bar {
   box-sizing: border-box;
   color: $white;
-  height: 100%;
+  height: 100vh;
   width: 300px;
   .header {
     background-color: $side_blue_dark;
@@ -28,8 +28,9 @@
 
   .groups {
     background-color: $side_blue_light;
-    height: calc(100% - 100px);
+    height: calc(100vh - 100px);
     padding: 0 20px;
+    overflow: scroll;
     .group {
       box-sizing: border-box;
       padding: 20px 0 40px;
